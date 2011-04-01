@@ -1,0 +1,12 @@
+source "http://rubygems.org"
+
+gem "sinatra", "=1.0.0"
+gem "json", "=1.4.6"
+gem "bson", "=1.2.2"
+gem "bson_ext", "=1.2.2"
+gem "rspec", "=1.2.0", :require => "spec"
+gem "rack", "=1.2.2"
+gem "rack-test", "=0.5.7", :require => "rack/test"
+gem "httparty", "=0.6.1"
+gem "mongo", "=1.2.2"
+gem "crack", "=0.1.8"
