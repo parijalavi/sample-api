@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Sample API to mongoDB database storing JSON documents</title>
+  </head>
+  <body>
+  
+  <h2> Sample API</h2>
+  <h3> Available Services </h3> 
+      <ul>get "/sample/id/:sample_id"</ul>
+      <ul>get "/unapproved/:number_of_samples"</ul>
+      <ul>post "/sample/id/:sample_id"</ul>
+      <ul>delete "/sample/id/:sample_id"</ul>
+      <ul>post "/sample"</ul>
+      <ul>post "/unapproved"</ul>  
+
+  
+  
+  <h3> Using the Service </h3>
+  <p>For help in formatting json documents, go to <a href="http://www.jsonlint.com/">JSONlint</a></p>
+  
+  <p>Sample Calls:</p>
+  
+  <p>From the command line, use curl to access services.  Posts and deletes are protected; the username is sharp, password is moon.</p>
+  
+    Examples:
+       <ul>curl -i -H 'Content-Type: application/json' -X 'POST' 'http://sharp-moon-211.heroku.com/unapproved' -d '{"samples" : [{"person":"Seb", "category":"fresh", "catchphrase":"I love Nutella." }]}' -u 'sharp:moon'</ul>
+        <ul>curl -i -X 'GET' 'http://sharp-moon-211.heroku.com/unapproved/10'</ul>
+        <ul>curl -i -X 'DELETE' 'http://evening-winter-853.heroku.com/sample/id/4d8fd159c0847f7fd0000001' -u 'sharp:moon'</ul>
+        <ul> *Note: copying and pasting the delete method will not work until you replace the id ;)</ul>
+     
+    
+  <h3> A little bit about the services available </h3>
+  
+  <p>This is meant to provide the ability to add rows en masse to a database: in the first sample call above, "samples" is an array which could contain many "person" rows.  The idea is that a bulk of unapproved data can be added.  Then an administrator can approve data; a content resource management system can update unapproved quotes and change them to approved by using the post "sample/id/:sample_id" service.  We chose to make this update a post rather than a put call because under the hood, the row contains an updated_at field which the service automatically updates when this particular method is called. </p>
+  
+  </body>
+</html>

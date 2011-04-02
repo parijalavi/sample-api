@@ -41,7 +41,7 @@ before do
 end
 
 get "/" do
-  "Look for API documentation coming soon!"
+  erb :index
 end
 
 get "/sample/id/:sample_id" do
