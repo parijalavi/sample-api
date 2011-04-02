@@ -12,7 +12,7 @@ module Helpers
   def self.production_connection
     Proc.new do 
       auth = Helpers.credentials
-      c = Mongo::Connection.new(Helpers.db_string(:production), 27094)
+      c = Mongo::Connection.new(Helpers.db_string(:production), 27076)
       db = c.db("practice")
       db.authenticate(auth.first, auth.last)
       db
