@@ -31,7 +31,7 @@ configure :production do
   #username/password are API credentials
   set :username, "sample"
   set :password, "sample"
-  set :hostname, ""
+  set :hostname, "http://vivid-sword-371.heroku.com/"
   set :db_string, Helpers.db_string(:production)
   set :mongo_db, Helpers.production_connection
 end
