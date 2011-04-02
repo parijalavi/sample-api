@@ -29,8 +29,8 @@ end
 
 configure :production do
   #username/password are API credentials
-  set :username, "sample"
-  set :password, "sample"
+  set :username, "sharp"
+  set :password, "moon"
   set :hostname, "http://sharp-moon-211.heroku.com"
   set :db_string, Helpers.db_string(:production)
   set :mongo_db, Helpers.production_connection
