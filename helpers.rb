@@ -13,7 +13,7 @@ module Helpers
     Proc.new do 
       auth = Helpers.credentials
       c = Mongo::Connection.new(Helpers.db_string(:production), 27094)
-      db = c.db("sample-api")
+      db = c.db("sample_api")
       db.authenticate(auth.first, auth.last)
       db
     end
