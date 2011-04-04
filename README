@@ -1,0 +1,16 @@
+This is a sample api library based on a module authored with Sebastian Wittenkamp.  We designed this to be part of a larger application.  We authored this using test driven development and pair programming techniques. 
+
+We chose to create this api and database outside of the application for two main reasons.  The first was to keep our application lightweight in anticipation of translating it to mobile platforms.  The second was to keep this data separate from a previously existing data in another database.
+
+You can interact with a deployed and functional version of this code using <http://sharp-moon-211.heroku.com/>.  There are instructions and sample calls listed at the site.  
+
+To run the unit tests, you'll need to have a working installation of ruby version 1.9.2 or higher.  After installing this directory, run the commands:
+rm Gemfile.lock 
+bundle install
+
+This should automatically install all required ruby gems.  To run unit tests, use:
+bundle spec exec file_spec.rb
+
+Cheers!
+
+Pari
